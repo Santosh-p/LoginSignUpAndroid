@@ -1,5 +1,6 @@
 package com.mywork.loginsignupandroid;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +25,9 @@ public class LoginActivity extends AppCompatActivity {
                 if(pin.equals("4444")){
                     Toast.makeText(getApplicationContext(),"Login Success!!",Toast.LENGTH_LONG).show();
                 }else {
+
+                    Intent i=new Intent(LoginActivity.this,SignUpActivity.class);
+                    startActivity(i);
                     Toast.makeText(getApplicationContext(),"Login Failed!!",Toast.LENGTH_LONG).show();
                 }
             }
